@@ -12,3 +12,26 @@ char* utils_array_cpy_fixed(char* dst, char* src, uint8_t length)
     }
     return "";
 }
+
+bool utils_strings_match(const char* string1, const char* string2)
+{
+    uint32_t i = 0;
+    for(; string1[i]; i++){
+	if(string1[i] != string2[i]){
+	    return false;
+	}
+    }
+    if(string2[i]){
+	return false;
+    }
+    return true;
+}
+
+uint32_t utils_string_to_number(const char* string)
+{
+    uint32_t result = 0;
+    for(uint8_t i = 0; string[i]; i++){
+	result = (result * 10) + (string[i] - 48);
+    }
+    return result;
+}
