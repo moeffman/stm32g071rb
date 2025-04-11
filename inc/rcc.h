@@ -95,6 +95,7 @@ typedef struct {
 /*
 * RCC_APB2
 */
+#define RCC_APB2_SYSCFG     (BIT0)
 #define RCC_APB2_TIM1       (BIT11)
 #define RCC_APB2_SPI1       (BIT12)
 #define RCC_APB2_USART1     (BIT14)
